@@ -1,0 +1,54 @@
+delete      template
+snippet     template
+abbr        template <T>
+    template<typename ${1:T}>
+
+
+delete      class
+snippet     class
+abbr        class {}
+    class ${1:#:name}
+    {
+        ${2}
+    };
+
+
+delete      for_CPP11
+snippet     foreach
+abbr        for (:) {}
+    for (${1:#:var} : ${2:#:container}) {
+        ${0:TARGET}
+    }
+
+
+delete      namespace
+snippet     namespace
+abbr        namespace {}
+options     head
+    namespace ${1:#:name} {
+    ${0:TARGET}
+    } // namespace $1
+
+
+delete      inc
+delete      include
+snippet     inc
+alias       #inc
+    #include <${1:stdio}>${0}
+
+
+delete      inc2
+delete      #inc2
+snippet     inc_local
+alias       #inc_local
+    #include "${1}"${0}
+
+
+snippet include-guard
+alias #include-guard, #ifndef-guard
+    #ifndef ${1:SYMBOL}
+    #define $1
+
+    ${0:TARGET}
+    #endif /* end of include guard */
+
