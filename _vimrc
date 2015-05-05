@@ -63,9 +63,6 @@ if has('lua')
     endif
     let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
-    imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-    smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-
     imap <expr><CR> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? neocomplete#close_popup() : "\<CR>"
     smap <expr><CR> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<CR>"
 
@@ -95,9 +92,6 @@ else
     endif
     let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
-    imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-    smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-
     imap <expr><CR> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? neocomplcache#close_popup() : "\<CR>"
     smap <expr><CR> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<CR>"
 
@@ -112,9 +106,15 @@ else
     endif
 endif
 
+
 " neosnippet settings
-let g:neosnippet#snippets_directory = '~/.vim/snippets'
 set completeopt-=preview
+let g:neosnippet#snippets_directory = '~/.vim/snippets'
+let g:neosnippet#disable_runtime_snippets = {'javascript': 1}
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
 
 filetype plugin indent on
 syntax on

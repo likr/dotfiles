@@ -1,0 +1,90 @@
+snippet f
+options word
+  (${1}) => ${0:TARGET}
+
+snippet fn
+options head
+  const ${1} = (${2}) => {
+    ${0:TARGET}
+  };
+
+snippet method
+options head
+  ${1:name}(${2:arg}) {
+    ${3}
+  }
+
+snippet if
+options head
+  if (${1:true}) {
+    ${0:TARGET}
+  }
+
+snippet ifelse
+options head
+  if (${1:#:condition}) {
+    ${0:TARGET}
+  } else {
+  }
+
+snippet for
+options head
+  for (${1}; ${2}; ${3}) {
+    ${0:TARGET}
+  }
+
+snippet forinc
+options head
+  for (let ${1:i} = 0; $1 < ${2:n}; ++$1) {
+    ${0:TARGET}
+  }
+
+snippet fordec
+options head
+  for (let ${1:i} = ${2:n} - 1; $1 > 0; --$1) {
+    ${0:TARGET}
+  }
+
+snippet forin
+options head
+  for (const ${1:key} in ${2:a}) {
+    ${0:TARGET}
+  }
+
+snippet forof
+options head
+  for (const ${1:x} of ${2:a}) {
+    ${0:TARGET}
+  }
+
+snippet class
+options head
+  class ${1:Name} {
+    constructor() {
+    }
+  }
+
+snippet import
+options head
+  import ${1:name} from '${2:path}';
+
+snippet export
+options head
+  export default ${1:name};
+
+snippet console-log
+alias cl
+options head
+  console.log(${0:TARGET});
+
+snippet describe
+options head
+  describe('${1}', () => {
+    ${0:TARGET}
+  });
+
+snippet it
+options head
+  it('${1}', () => {
+    ${2}
+  });
