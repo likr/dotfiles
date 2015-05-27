@@ -42,6 +42,7 @@ NeoBundle 'https://github.com/nathanaelkane/vim-indent-guides.git'
 NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'https://github.com/bronson/vim-trailing-whitespace.git'
 NeoBundle 'https://github.com/elzr/vim-json.git'
+NeoBundle 'https://github.com/pangloss/vim-javascript.git'
 if has('python')
     " NeoBundle "https://github.com/klen/python-mode"
 endif

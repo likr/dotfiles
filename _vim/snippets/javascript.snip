@@ -88,3 +88,22 @@ options head
   it('${1}', () => {
     ${2}
   });
+
+snippet directive
+options head
+  angular.module('${1:app}').directive('${2:name}', () => {
+    return {
+      restrict: 'E',
+      templateUrl: '${3:path}',
+      scope: {
+      },
+      controllerAs: '${4:name}',
+      controller: ${5:Controller}
+    };
+  });
+
+snippet factory
+options head
+  angular.module('${1:app}').factory('${2:name}', () => {
+    ${3}
+  });
