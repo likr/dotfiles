@@ -66,7 +66,7 @@ options head
 
 snippet import
 options head
-  import ${1:name} from '${2:path}';
+  import ${1:name} from "${2:path}";
 
 snippet export
 options head
@@ -79,31 +79,50 @@ options head
 
 snippet describe
 options head
-  describe('${1}', () => {
+  describe("${1}", () => {
     ${0:TARGET}
   });
 
 snippet it
 options head
-  it('${1}', () => {
+  it("${1}", () => {
     ${2}
   });
 
 snippet directive
 options head
-  angular.module('${1:app}').directive('${2:name}', () => {
+  angular.module("${1:app}").directive("${2:name}", () => {
     return {
-      restrict: 'E',
-      templateUrl: '${3:path}',
+      restrict: "E",
+      templateUrl: "${3:path}",
       scope: {
       },
-      controllerAs: '${4:name}',
+      controllerAs: "${4:name}",
       controller: ${5:Controller}
     };
   });
 
 snippet factory
 options head
-  angular.module('${1:app}').factory('${2:name}', () => {
+  angular.module("${1:app}").factory("${2:name}", () => {
     ${3}
   });
+
+snippet reactcomponent
+options head
+  class ${1:Name} extends React.Component {
+    render() {
+      return ${2};
+    }
+  }
+
+snippet reducer
+options head
+  const ${1:hogeReducer} = (state=${2}, action) => {
+    switch (action.type) {
+      case ${3}:
+        ${4}
+      default:
+        return state;
+    }
+  };

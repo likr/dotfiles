@@ -2,4 +2,5 @@ set lines=60
 set columns=180
 set guifont=IPAGothic:h12
 set transparency=10
-let g:vimshell_editor_command = '/Applications/MacPorts/MacVim.app/Contents/MacOS/Vim'
+let g:vimshell_editor_command = '/Applications/MacVim.app/Contents/MacOS/Vim'
+colorscheme molokai

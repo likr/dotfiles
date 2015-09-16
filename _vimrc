@@ -43,6 +43,8 @@ NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'https://github.com/bronson/vim-trailing-whitespace.git'
 NeoBundle 'https://github.com/elzr/vim-json.git'
 NeoBundle 'https://github.com/pangloss/vim-javascript.git'
+NeoBundle 'https://github.com/rust-lang/rust.vim'
+NeoBundle 'https://github.com/mxw/vim-jsx'
 if has('python')
     " NeoBundle "https://github.com/klen/python-mode"
 endif
@@ -131,8 +133,6 @@ set shiftwidth=4
 set softtabstop=4
 set backspace=start,indent
 set scrolloff=20
-
-colorscheme freya
 
 if exists('&ambiwidth')
     set ambiwidth=double
