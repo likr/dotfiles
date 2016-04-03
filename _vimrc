@@ -9,37 +9,19 @@ endif
 let g:neobundle_default_git_protocol = 'https'
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundle 'https://github.com/flazz/vim-colorschemes.git'
-NeoBundle 'https://github.com/h1mesuke/unite-outline'
-NeoBundle 'https://github.com/jrk/vim-ocaml.git'
-NeoBundle 'https://github.com/leafgarland/typescript-vim.git'
 NeoBundle 'https://github.com/scrooloose/syntastic'
-NeoBundle "https://github.com/sgur/unite-qf"
 NeoBundle 'https://github.com/Shougo/neobundle.vim'
 NeoBundle 'https://github.com/Shougo/vimproc'
-NeoBundle 'https://github.com/Shougo/vimshell'
 NeoBundle 'https://github.com/Shougo/unite.vim'
-NeoBundle 'https://github.com/Shougo/unite-ssh'
 NeoBundle 'https://github.com/Shougo/vimfiler'
 NeoBundle 'https://github.com/Shougo/vinarise'
 NeoBundle 'https://github.com/Shougo/neosnippet'
 NeoBundle 'https://github.com/Shougo/neosnippet-snippets'
-NeoBundle 'https://github.com/thinca/vim-localrc'
-NeoBundle 'https://github.com/thinca/vim-quickrun'
 NeoBundle "https://github.com/thinca/vim-template"
-NeoBundle 'https://github.com/tsukkee/unite-tag'
-NeoBundle 'https://github.com/majutsushi/tagbar'
-NeoBundle "https://github.com/mattn/webapi-vim"
-NeoBundle "https://github.com/mattn/gist-vim"
 NeoBundle 'https://github.com/ujihisa/unite-colorscheme'
-NeoBundle "https://github.com/vim-jp/cpp-vim"
-NeoBundle 'https://github.com/vim-scripts/ref.vim'
-NeoBundle 'https://github.com/vim-scripts/rest.vim'
-NeoBundle "https://github.com/vim-scripts/scons.vim"
 NeoBundle 'https://github.com/vim-scripts/surround.vim'
 NeoBundle 'https://github.com/vim-scripts/sudo.vim'
-NeoBundle 'https://github.com/yuratomo/dbg.vim.git'
 NeoBundle 'https://github.com/nathanaelkane/vim-indent-guides.git'
-NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'https://github.com/bronson/vim-trailing-whitespace.git'
 NeoBundle 'https://github.com/elzr/vim-json.git'
 NeoBundle 'https://github.com/pangloss/vim-javascript.git'
@@ -48,12 +30,14 @@ NeoBundle 'https://github.com/mxw/vim-jsx'
 if has('python')
     " NeoBundle "https://github.com/klen/python-mode"
 endif
+if has('lua')
+    NeoBundle 'https://github.com/Shougo/neocomplete'
+endif
 call neobundle#end()
 
-let g:acp_enableAtStartup = 0
 if has('lua')
     " neocomplete setting
-    NeoBundle 'https://github.com/Shougo/neocomplete'
+    let g:acp_enableAtStartup = 0
     let g:neocomplete#enable_at_startup = 1
     let g:neocomplete#enable_smart_case = 1
     let g:neocomplete#enable_underbar_completion = 1
@@ -74,39 +58,6 @@ if has('lua')
     inoremap <expr><TAB> pumvisible() ? neocomplete#complete_common_string() : "\<TAB>"
     inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
     inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-else
-    " neocomplcache setting
-    NeoBundle 'https://github.com/Shougo/neocomplcache'
-    let g:neocomplcache_enable_at_startup = 1
-    let g:neocomplcache_enable_smart_case = 1
-    let g:neocomplcache_enable_underbar_completion = 1
-    let g:neocomplcache_enable_auto_select = 1
-    let g:neocomplcache_min_syntax_length = 3
-    let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-    let g:neocomplcache_dictionary_filetype_lists = {
-        \ 'default' : '',
-        \ 'vimshell' : $HOME.'/.vimshell_hist',
-        \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
-
-    if !exists('g:neocomplcache_keyword_patterns')
-      let g:neocomplcache_keyword_patterns = {}
-    endif
-    let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-    imap <expr><CR> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-    smap <expr><CR> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<CR>"
-
-    inoremap <expr><S-CR> neocomplcache#smart_close_popup()."\<CR>"
-    inoremap <expr><C-l> neocomplcache#smart_close_popup()
-    inoremap <expr><TAB> pumvisible() ? neocomplcache#complete_common_string() : "\<TAB>"
-    inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-    inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-
-    if !exists('g:neocomplcache_same_filetype_lists')
-        let g:neocomplcache_same_filetype_lists = {}
-    endif
 endif
 
 

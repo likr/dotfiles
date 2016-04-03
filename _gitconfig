@@ -5,6 +5,7 @@
 	ui = auto
 [core]
 	excludesfile = ~/.gitignore
+	editor = /Applications/MacVim.app/Contents/MacOS/Vim
 [github]
 	user = likr
 [difftool "sourcetree"]
@@ -17,3 +18,7 @@
 	helper = osxkeychain
 [url "https://"]
 	insteadOf = git://
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
