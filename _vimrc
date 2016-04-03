@@ -90,7 +90,7 @@ if exists('&ambiwidth')
 endif
 
 " encoding settings
-source ~/dotfiles/encode.vim
+" source ~/dotfiles/encode.vim
 
 " statusline settings
 set laststatus=2
