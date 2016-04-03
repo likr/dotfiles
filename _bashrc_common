@@ -42,7 +42,8 @@ export OPAMKEEPBUILDDIR=1
 export OCAML_ANNOT=1
 
 # gvim
-alias gvim='open -a MacVim'
+alias vim="mvim -v"
+alias gvim="mvim"
 
 # OMake
 export OMAKEFLAGS=--verbose
