@@ -6,7 +6,13 @@ snippet fn
 options head
   const ${1} = (${2}) => {
     ${0:TARGET}
-  };
+  }
+
+snippet efn
+options head
+  export const ${1} = (${2}) => {
+    ${0:TARGET}
+  }
 
 snippet method
 options head
@@ -75,19 +81,19 @@ options head
 snippet console-log
 alias cl
 options head
-  console.log(${0:TARGET});
+  console.log(${0:TARGET})
 
 snippet describe
 options head
   describe('${1}', () => {
     ${0:TARGET}
-  });
+  })
 
 snippet it
 options head
   it('${1}', () => {
     ${2}
-  });
+  })
 
 snippet directive
 options head
@@ -99,20 +105,20 @@ options head
       },
       controllerAs: '${4:name}',
       controller: ${5:Controller}
-    };
-  });
+    }
+  })
 
 snippet factory
 options head
   angular.module('${1:app}').factory('${2:name}', () => {
     ${3}
-  });
+  })
 
 snippet reactcomponent
 options head
   class ${1:Name} extends React.Component {
     render() {
-      return ${2};
+      return ${2}
     }
   }
 
@@ -123,6 +129,6 @@ options head
       case ${3}:
         ${4}
       default:
-        return state;
+        return state
     }
   };

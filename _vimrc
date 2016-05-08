@@ -27,6 +27,7 @@ NeoBundle 'https://github.com/elzr/vim-json.git'
 NeoBundle 'https://github.com/pangloss/vim-javascript.git'
 NeoBundle 'https://github.com/rust-lang/rust.vim'
 NeoBundle 'https://github.com/mxw/vim-jsx'
+NeoBundle 'https://github.com/leafgarland/typescript-vim'
 if has('python')
     " NeoBundle "https://github.com/klen/python-mode"
 endif
@@ -118,6 +119,7 @@ set smartcase
 set nowritebackup
 set nobackup
 set noswapfile
+set noundofile
 
 " hlsearch
 set hlsearch
@@ -189,7 +191,7 @@ if executable('clang++')
 endif
 
 " syntastic javascript settings
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['standard']
 
 " syntastic typescript settings
 "let g:syntastic_typescript_tsc_args = '-t ES5 --noImplicitAny'
