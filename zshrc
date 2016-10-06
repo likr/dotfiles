@@ -20,3 +20,6 @@ setopt EXTENDED_HISTORY
 # alias
 alias vim="mvim -v"
 alias gvim="mvim"
+
+# neovim
+export XDG_CONFIG_HOME="$HOME/.config"
