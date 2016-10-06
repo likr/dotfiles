@@ -5,9 +5,9 @@ endif
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 call dein#begin('~/.cache/dein')
 call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/deoplete.nvim')
+call dein#add('Shougo/neosnippet')
 call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 call dein#end()
 
 filetype plugin indent on
@@ -37,3 +37,9 @@ set spelllang+=cjk
 set spell
 set visualbell t_vb=
 set noerrorbells
+
+if has('python3')
+  let g:deoplete#enable_at_startup = 1
+endif
+
+
