@@ -8,6 +8,7 @@ call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/neosnippet')
 call dein#add('Shougo/neosnippet-snippets')
+call dein#add('nanotech/jellybeans.vim')
 call dein#end()
 
 filetype plugin indent on
@@ -37,6 +38,8 @@ set spelllang+=cjk
 set spell
 set visualbell t_vb=
 set noerrorbells
+
+colorscheme jellybeans
 
 if has('python3')
   let g:deoplete#enable_at_startup = 1
