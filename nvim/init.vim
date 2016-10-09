@@ -13,6 +13,7 @@ call dein#add('Shougo/vimfiler')
 call dein#add('Shougo/vinarise')
 call dein#add('nanotech/jellybeans.vim')
 call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('scrooloose/syntastic')
 call dein#end()
 
 filetype plugin indent on
@@ -66,6 +67,10 @@ let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 let g:vimfiler_directory_display_top = 0
 let g:vimfiler_ignore_pattern = '^\%(.git\|.DS_Store\)$'
+
+" syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 1
 
 " indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
