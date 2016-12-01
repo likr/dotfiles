@@ -1,41 +1,39 @@
-set nocompatible
-filetype plugin indent off
-
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+if &compatible
+  set nocompatible
 endif
+set runtimepath+=~/dein/repos/github.com/Shougo/dein.vim
 
-" Plugins
-let g:neobundle_default_git_protocol = 'https'
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundle 'https://github.com/flazz/vim-colorschemes.git'
-NeoBundle 'https://github.com/scrooloose/syntastic'
-NeoBundle 'https://github.com/Shougo/neobundle.vim'
-NeoBundle 'https://github.com/Shougo/vimproc'
-NeoBundle 'https://github.com/Shougo/unite.vim'
-NeoBundle 'https://github.com/Shougo/vimfiler'
-NeoBundle 'https://github.com/Shougo/vinarise'
-NeoBundle 'https://github.com/Shougo/neosnippet'
-NeoBundle 'https://github.com/Shougo/neosnippet-snippets'
-NeoBundle "https://github.com/thinca/vim-template"
-NeoBundle "https://github.com/thinca/vim-quickrun"
-NeoBundle 'https://github.com/ujihisa/unite-colorscheme'
-NeoBundle 'https://github.com/vim-scripts/surround.vim'
-NeoBundle 'https://github.com/vim-scripts/sudo.vim'
-NeoBundle 'https://github.com/nathanaelkane/vim-indent-guides.git'
-NeoBundle 'https://github.com/bronson/vim-trailing-whitespace.git'
-NeoBundle 'https://github.com/elzr/vim-json.git'
-NeoBundle 'https://github.com/pangloss/vim-javascript.git'
-NeoBundle 'https://github.com/rust-lang/rust.vim'
-NeoBundle 'https://github.com/mxw/vim-jsx'
-NeoBundle 'https://github.com/leafgarland/typescript-vim'
-if has('python')
-    " NeoBundle "https://github.com/klen/python-mode"
-endif
+call dein#begin('~/dein')
+call dein#add('Shougo/dein.vim')
+call dein#add('flazz/vim-colorschemes.git')
+call dein#add('scrooloose/syntastic')
+call dein#add('Shougo/neobundle.vim')
+call dein#add('Shougo/vimproc')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/vimfiler')
+call dein#add('Shougo/vinarise')
+call dein#add('Shougo/neosnippet')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add("thinca/vim-template")
+call dein#add("thinca/vim-quickrun")
+call dein#add('ujihisa/unite-colorscheme')
+call dein#add('vim-scripts/surround.vim')
+call dein#add('vim-scripts/sudo.vim')
+call dein#add('nathanaelkane/vim-indent-guides.git')
+call dein#add('bronson/vim-trailing-whitespace.git')
+call dein#add('elzr/vim-json.git')
+call dein#add('pangloss/vim-javascript.git')
+call dein#add('rust-lang/rust.vim')
+call dein#add('mxw/vim-jsx')
+call dein#add('leafgarland/typescript-vim')
+call dein#end()
 if has('lua')
-    NeoBundle 'https://github.com/Shougo/neocomplete'
+  call dein#add('https://github.com/Shougo/neocomplete')
 endif
-call neobundle#end()
+
+filetype plugin indent on
+
+syntax enable
 
 if has('lua')
     " neocomplete setting
