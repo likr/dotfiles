@@ -16,3 +16,5 @@ fi
 export LC_ALL=$LANG
 
 unset SSH_ASKPASS
+
+export PATH=$PATH:$DOTDIR/bin
