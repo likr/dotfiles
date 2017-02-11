@@ -196,6 +196,8 @@ let g:syntastic_javascript_checkers = ['standard']
 "let g:syntastic_typescript_tsc_args = '-t ES5 --noImplicitAny'
 let g:syntastic_typescript_tsc_args = '-t ES5 --module commonjs'
 
+" JSX support
+let g:jsx_ext_required = 0
 
 " 行末の空白文字を可視化
 highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#ff0000
