@@ -26,10 +26,10 @@ call dein#add('pangloss/vim-javascript.git')
 call dein#add('rust-lang/rust.vim')
 call dein#add('mxw/vim-jsx')
 call dein#add('leafgarland/typescript-vim')
-call dein#end()
 if has('lua')
   call dein#add('https://github.com/Shougo/neocomplete')
 endif
+call dein#end()
 
 filetype plugin indent on
 
