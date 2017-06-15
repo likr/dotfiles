@@ -4,4 +4,4 @@ set guifont=IPAGothic:h12
 set transparency=10
 set visualbell t_vg=
 let g:vimshell_editor_command = '/Applications/MacVim.app/Contents/MacOS/Vim'
-colorscheme molokai
+silent! colorscheme molokai

@@ -1,15 +1,15 @@
 if &compatible
   set nocompatible
 endif
-set runtimepath+=~/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/dein')
-  call dein#begin('~/dein')
-  call dein#add('Shougo/dein.vim')
+if dein#load_state('~/.vim/bundles')
+  call dein#begin('~/.vim/bundles')
+  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
   call dein#add('flazz/vim-colorschemes.git')
   call dein#add('scrooloose/syntastic')
   call dein#add('Shougo/neobundle.vim')
-  call dein#add('Shougo/vimproc')
+  call dein#add('Shougo/vimproc', {'build': 'make'})
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/vimfiler')
   call dein#add('Shougo/vinarise')
