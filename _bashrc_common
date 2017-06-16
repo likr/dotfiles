@@ -17,4 +17,11 @@ export LC_ALL=$LANG
 
 unset SSH_ASKPASS
 
-export PATH=$PATH:$DOTDIR/bin
+export PATH=$PATH:$DOTDIR/bin:$HOME/.yarn/bin:$HOME/anaconda/bin
+
+# Rust setting
+if [ -e $HOME/.cargo ]
+then
+  source $HOME/.cargo/env
+  export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+fi
