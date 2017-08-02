@@ -28,6 +28,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('racer-rust/vim-racer')
   call dein#add('mxw/vim-jsx')
   call dein#add('leafgarland/typescript-vim')
+  call dein#add('tpope/tpope-vim-abolish')
   if has('lua')
     call dein#add('https://github.com/Shougo/neocomplete')
   endif
