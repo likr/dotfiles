@@ -15,11 +15,12 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('Shougo/vinarise')
   call dein#add('Shougo/neosnippet')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add("thinca/vim-template")
-  call dein#add("thinca/vim-quickrun")
+  call dein#add('thinca/vim-template')
+  call dein#add('thinca/vim-quickrun')
   call dein#add('ujihisa/unite-colorscheme')
   call dein#add('vim-scripts/surround.vim')
   call dein#add('vim-scripts/sudo.vim')
+  call dein#add('vim-scripts/localrc.vim')
   call dein#add('nathanaelkane/vim-indent-guides.git')
   call dein#add('bronson/vim-trailing-whitespace.git')
   call dein#add('elzr/vim-json.git')
@@ -29,6 +30,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('mxw/vim-jsx')
   call dein#add('leafgarland/typescript-vim')
   call dein#add('tpope/tpope-vim-abolish')
+  call dein#add('posva/vim-vue')
   if has('lua')
     call dein#add('https://github.com/Shougo/neocomplete')
   endif
@@ -182,7 +184,7 @@ let g:vimshell_interactive_update_time = 300
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['python', 'ocaml', 'javascript', 'coffee'],
+                           \ 'active_filetypes': ['python', 'ocaml', 'javascript', 'coffee', 'vue'],
                            \ 'passive_filetypes': ['html', 'rst', 'latex'] }
 nnoremap <silent> ,s :<C-u>SyntasticToggleMode<CR>
 

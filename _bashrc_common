@@ -17,8 +17,8 @@ export LC_ALL=$LANG
 
 unset SSH_ASKPASS
 
-export PATH=$PATH:$DOTDIR/bin:$HOME/.yarn/bin:$HOME/anaconda/bin
-export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/emsdk/emscripten/1.37.9/system/include
+export PATH=$PATH:$DOTDIR/bin:$HOME/.yarn/bin
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/emsdk/emscripten/1.37.9/system/include:$HOME/work/emogdf/ogdf/include
 
 # Rust setting
 if [ -e $HOME/.cargo ]
