@@ -1,0 +1,27 @@
+Host *
+UseKeychain yes
+
+Host focuslogin
+HostName ssh.j-focus.jp
+User ulez0004
+
+Host focus
+HostName ff01.j-focus.jp
+User ulez0004
+ProxyCommand ssh focuslogin nc %h %p
+
+Host raspberrypi
+HostName raspberrypi.local
+User pi
+
+Host red-rail
+HostName 192.168.11.92
+User onoue
+
+Host great-auk
+HostName great-auk.local
+User onoue
+
+Host umineko
+HostName 172.18.161.111
+User onoue
