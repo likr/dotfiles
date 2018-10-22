@@ -25,3 +25,14 @@ User onoue
 Host umineko
 HostName 172.18.161.111
 User onoue
+
+Host virgo
+HostName virgo.is.chs.nihon-u.ac.jp
+User onoue
+Port 50022
+
+Host virgo-cms
+HostName virgo.is.chs.nihon-u.ac.jp
+User onoue
+Port 50022
+ProxyCommand nc -X connect -x cache.educ.chs.nihon-u.ac.jp:8080 %h %p
