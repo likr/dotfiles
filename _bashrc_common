@@ -17,6 +17,12 @@ export LC_ALL=$LANG
 
 unset SSH_ASKPASS
 
+# history settings
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTCONTROL=ignoreboth
+export HISTIGNORE=ls:cat:history
+
 export GOPATH=$HOME/.go
 
 export PATH=$PATH:$DOTDIR/bin:$HOME/.yarn/bin:$GOPATH/bin:$HOME/bin
