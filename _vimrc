@@ -7,7 +7,7 @@ if dein#load_state('~/.vim/bundles')
   call dein#begin('~/.vim/bundles')
   call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
   call dein#add('flazz/vim-colorschemes.git')
-  call dein#add('scrooloose/syntastic')
+  call dein#add('vim-syntastic/syntastic')
   call dein#add('Shougo/neobundle.vim')
   call dein#add('Shougo/vimproc', {'build': 'make'})
   call dein#add('Shougo/unite.vim')
@@ -32,7 +32,6 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('maxmellon/vim-jsx-pretty')
   call dein#add('posva/vim-vue')
   call dein#add('leafgarland/typescript-vim')
-  call dein#add('mtscout6/syntastic-local-eslint.vim')
   call dein#add('prettier/vim-prettier')
 
   " Rust
@@ -236,3 +235,7 @@ set spelllang+=cjk
 set spell
 
 let g:vim_json_syntax_conceal = 0
+
+" Prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
