@@ -24,16 +24,21 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('nathanaelkane/vim-indent-guides.git')
   call dein#add('bronson/vim-trailing-whitespace.git')
   call dein#add('elzr/vim-json.git')
+  call dein#add('tpope/tpope-vim-abolish')
+  call dein#add('dart-lang/dart-vim-plugin')
+
+  " JavaScript
   call dein#add('pangloss/vim-javascript.git')
+  call dein#add('maxmellon/vim-jsx-pretty')
+  call dein#add('posva/vim-vue')
+  call dein#add('leafgarland/typescript-vim')
+  call dein#add('mtscout6/syntastic-local-eslint.vim')
+  call dein#add('prettier/vim-prettier')
+
+  " Rust
   call dein#add('rust-lang/rust.vim')
   call dein#add('racer-rust/vim-racer')
-  call dein#add('mxw/vim-jsx')
-  call dein#add('leafgarland/typescript-vim')
-  call dein#add('tpope/tpope-vim-abolish')
-  call dein#add('posva/vim-vue')
-  call dein#add('dart-lang/dart-vim-plugin')
-  call dein#add('prettier/vim-prettier')
-  call dein#add('mtscout6/syntastic-local-eslint.vim')
+
   if has('lua')
     call dein#add('https://github.com/Shougo/neocomplete')
   endif
@@ -207,7 +212,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_tsc_args = '-t ES5 --module commonjs'
 
 " JSX support
-let g:jsx_ext_required = 0
+let g:vim_jsx_pretty_highlight_close_tag = 1
 
 " 行末の空白文字を可視化
 highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#ff0000
