@@ -31,6 +31,9 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('leafgarland/typescript-vim')
   call dein#add('tpope/tpope-vim-abolish')
   call dein#add('posva/vim-vue')
+  call dein#add('dart-lang/dart-vim-plugin')
+  call dein#add('prettier/vim-prettier')
+  call dein#add('mtscout6/syntastic-local-eslint.vim')
   if has('lua')
     call dein#add('https://github.com/Shougo/neocomplete')
   endif
@@ -197,7 +200,7 @@ if executable('clang++')
 endif
 
 " syntastic javascript settings
-let g:syntastic_javascript_checkers = ['standard']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " syntastic typescript settings
 "let g:syntastic_typescript_tsc_args = '-t ES5 --noImplicitAny'
