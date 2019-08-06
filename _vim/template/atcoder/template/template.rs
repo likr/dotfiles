@@ -1,3 +1,4 @@
+#[allow(unused_macros)]
 macro_rules! input {
     (source = $s:expr, $($r:tt)*) => {
         let mut iter = $s.split_whitespace();
@@ -19,6 +20,7 @@ macro_rules! input {
     };
 }
 
+#[allow(unused_macros)]
 macro_rules! input_inner {
     ($next:expr) => {};
     ($next:expr, ) => {};
@@ -27,8 +29,14 @@ macro_rules! input_inner {
         let $var = read_value!($next, $t);
         input_inner!{$next $($r)*}
     };
+
+    ($next:expr, mut $var:ident : $t:tt $($r:tt)*) => {
+        let mut $var = read_value!($next, $t);
+        input_inner!{$next $($r)*}
+    };
 }
 
+#[allow(unused_macros)]
 macro_rules! read_value {
     ($next:expr, ( $($t:tt),* )) => {
         ( $(read_value!($next, $t)),* )
@@ -38,8 +46,19 @@ macro_rules! read_value {
         (0..$len).map(|_| read_value!($next, $t)).collect::<Vec<_>>()
     };
 
+    ($next:expr, [ $t:tt ]) => {
+        {
+            let len = read_value!($next, usize);
+            (0..len).map(|_| read_value!($next, $t)).collect::<Vec<_>>()
+        }
+    };
+
     ($next:expr, chars) => {
         read_value!($next, String).chars().collect::<Vec<char>>()
+    };
+
+    ($next:expr, bytes) => {
+        read_value!($next, String).into_bytes()
     };
 
     ($next:expr, usize1) => {
