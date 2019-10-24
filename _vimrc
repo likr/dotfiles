@@ -34,6 +34,9 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('leafgarland/typescript-vim')
   call dein#add('prettier/vim-prettier')
 
+  " Python
+  call dein#add('tell-k/vim-autopep8')
+
   " Rust
   call dein#add('rust-lang/rust.vim')
   call dein#add('racer-rust/vim-racer')
@@ -119,6 +122,8 @@ let g:pymode_syntax_print_as_function = 1
 let g:pymode_rope_sorted_completions = 0
 let g:pymode_rope_extended_complete = 0
 let g:pymode_rope_vim_completion = 0
+let g:autopep8_disable_show_diff=1
+let g:autopep8_on_save = 1
 
 " OCaml setting
 
